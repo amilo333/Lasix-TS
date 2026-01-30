@@ -1,0 +1,282 @@
+.header-row {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 120px;
+  background: linear-gradient(
+    180deg,
+    rgba(13, 73, 73, 0.9) 0%,
+    rgba(13, 73, 73, 0.63) 100%
+  );
+  backdrop-filter: blur(4px);
+  width: 100%;
+  padding: 32px 160px;
+  gap: 36px;
+  z-index: 1000;
+}
+
+.logo {
+  height: 108px;
+  width: 120px;
+  object-fit: contain;
+}
+
+.bd {
+  /* bd */
+
+  width: 1px;
+  height: 68px;
+
+  /* White/100 */
+  background: #ffffff;
+  opacity: 0.3;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand-name {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  color: #ffffff;
+
+  opacity: 0.7;
+}
+
+.header-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-list li {
+  list-style: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/font/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/font/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.language {
+  display: flex;
+  gap: 6px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #ffffff;
+  align-items: center;
+}
+
+.cta {
+  height: 52px;
+  width: 185px;
+  background: #ffffff;
+  border: none;
+  color: #0d4949;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+}
+.booking-bar {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}
+.booking-form {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 14px;
+  gap: 6px;
+}
+.field input {
+  width: 302.33px;
+  height: 48px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+}
+
+.cta-2 {
+  width: 185px;
+  height: 48px;
+  background: #0d4949;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffffff;
+  margin-top: 24px;
+  border: none;
+}
+.booking-bar {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 120px;
+}
+
+.booking-bar.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.btn-hide {
+  border: none;
+  height: 24px;
+  width: 90px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 14px;
+  position: absolute;
+  top: 0px;
+  right: 130px;
+  cursor: pointer;
+  background: inherit;
+  backdrop-filter: inherit;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.name-title {
+  display: none;
+}
+
+.sub-header {
+  display: none;
+}
+
+@media screen and (max-width: 391px) {
+  .sub-header.show {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    height: 68px;
+    background-color: #fff;
+    display: block;
+    padding: 12px 2px 2px 18px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  }
+  .sub-header {
+    display: none;
+  }
+  .booknow {
+    width: 350px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    border: none;
+    background-color: #0d4949;
+    color: #fff;
+  }
+
+  .sub-header .booknow img {
+    filter: brightness(0) invert(1);
+  }
+  .header-row {
+    max-width: 390px;
+    height: 64px;
+    padding: 12px 16px;
+    gap: 12px;
+  }
+  .name-title {
+    display: block;
+    font-size: 10px;
+    font-family: "Lora";
+    color: #ffffff;
+  }
+  .header-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .header-center {
+    display: none;
+  }
+
+  .bd {
+    display: none;
+  }
+
+  .cta {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 26px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .logo {
+    width: 60px;
+    height: auto;
+  }
+}

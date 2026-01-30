@@ -1,0 +1,104 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 21px;
+}
+
+.container .logo {
+  width: 233.7px;
+  height: 160px;
+  object-fit: contain;
+}
+
+.container p {
+  font-size: 17px;
+  line-height: 1.6;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+
+.hotline,
+.email {
+  font-size: 17px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+}
+
+.network {
+  display: flex;
+  gap: 18px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.list {
+  display: flex;
+  gap: 56px;
+}
+
+.item {
+  font-size: 16px;
+
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+
+.copyright {
+  background-color: #0d4949;
+  width: 100%;
+  height: 46px;
+  color: #fff;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+}
+
+.logo_1 {
+  display: none;
+}
+
+@media screen and (max-width: 391px) {
+  .logo {
+    display: none;
+  }
+  .logo_1 {
+    display: block;
+    width: 175.28px;
+    height: 120px;
+    object-fit: contain;
+  }
+
+  .container p,
+  .hotline,
+  .email,
+  .item {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .email {
+    line-height: 1.5;
+  }
+
+  .list{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  .container{
+    gap: 30px;
+  }
+
+  .copyright{
+    font-size: 12px;
+  }
+}

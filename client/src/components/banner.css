@@ -1,0 +1,26 @@
+.banner {
+  width: 100%;
+  height: auto;
+}
+
+.img-banner {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+
+@media screen and (max-width: 391px) {
+  /* .banner {
+    margin-top: 64px;
+    height: 216.11px;
+    width: 390px;
+  } */
+  .img-banner {
+    margin-top: 64px;
+    height: 216.11px;
+    width: 390px;
+    object-fit: cover;
+  }
+}

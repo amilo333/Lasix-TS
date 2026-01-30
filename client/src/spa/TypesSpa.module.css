@@ -1,0 +1,87 @@
+.container {
+  padding: 0 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.box {
+  display: flex;
+  min-height: 600px;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 40px;
+}
+
+.infor {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 55%;
+}
+
+.title {
+  font-size: 36px;
+  font-family: "Lora";
+  font-weight: 600;
+  color: #0d4949;
+  text-transform: uppercase;
+}
+
+.line {
+  border-bottom: 1px solid #0d4949;
+  width: 128px;
+  height: 4px;
+}
+
+.desc {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  padding-right: 135px;
+}
+
+.img1 {
+  width: 40%;
+  height: 80%;
+  object-fit: cover;
+}
+
+.container > div.box:nth-of-type(2n) {
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 391px) {
+  .container {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 450px;
+  }
+  .infor {
+    width: 100%;
+    margin: 6px;
+    order: 2;
+  }
+  .title {
+    font-size: 22px;
+  }
+  .desc {
+    padding: 0;
+    font-size: 13px;
+  }
+  .img1 {
+    width: 100%;
+    order: 1;
+  }
+  .container > div.box:nth-of-type(2n) {
+    flex-direction: column;
+  }
+}

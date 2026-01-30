@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+}
+.box-service {
+  display: flex;
+  min-height: 205px;
+  width: 80%;
+  justify-content: space-around;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.contact {
+  width: 90%;
+  background-color: #0d4949;
+  height: 120px;
+}
+
+@media screen and (max-width: 391px) {
+  .container {
+    width: 100%;
+    gap: 20px;
+  }
+  .box-service {
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: nowrap;
+    padding-left: 2rem;
+  }
+  .contact {
+    width: 100%;
+    background-color: #0d4949;
+    height: 244px;
+  }
+}

@@ -1,0 +1,39 @@
+.box {
+  width: 30%;
+  height: 66px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title {
+  font-size: 18px;
+  font-family: "Montserrat";
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.desc {
+  font-size: 17px;
+  font-family: "Montserrat";
+  color: rgb(75, 75, 75);
+}
+
+@media screen and (max-width: 391px) {
+  .box {
+    width: 100%;
+    padding: 1rem 0;
+  }
+  .title {
+    font-size: 17px;
+  }
+  .desc {
+    font-size: 14px;
+  }
+}
