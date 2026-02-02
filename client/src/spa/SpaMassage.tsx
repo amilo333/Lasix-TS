@@ -4,8 +4,12 @@ import banner_spa from "../assets/images/banner/banner-spa.png";
 import DescHotel from "../dining/DescHotel";
 import Footer from "../components/Footer";
 import logo_1 from "../assets/images/logo/logo_1.png";
+import { useEffect } from "react";
 
 export default function SpaMassage() {
+  useEffect(() => {
+    document.title = "Spa & Massage";
+  }, []);
   return (
     <div>
       <Banner banner={banner_spa}></Banner>

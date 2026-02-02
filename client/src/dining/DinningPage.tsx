@@ -7,11 +7,15 @@ import DescHotel from "./DescHotel";
 import DinnerStyle from "./DinnerStyle";
 import GallerySlide from "./GallerySlide";
 import ServiceDining from "./ServiceDining";
+import { useEffect } from "react";
 
 export default function DinningPage() {
   const css_c = {
     marginTop: "6rem",
   };
+  useEffect(() => {
+    document.title = "Dinning";
+  }, []);
   return (
     <div>
       <Banner banner={bannerDinning}></Banner>
@@ -21,7 +25,7 @@ export default function DinningPage() {
 Sed ac nunc a dolor posuere facilisis. Donec blandit mattis ultrices. In vel posuere leo."
       ></DescHotel>
       <GallerySlide></GallerySlide>
-      <div  style={css_c}>
+      <div style={css_c}>
         <ServiceDining services={services}></ServiceDining>
       </div>
       <DinnerStyle></DinnerStyle>

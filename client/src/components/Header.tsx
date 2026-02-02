@@ -23,7 +23,9 @@ export default function Header() {
     <div>
       <div className="header-row">
         <div className="header-left">
-          <img src={logo} alt="" className="logo" />
+          <Link to='/'>
+            <img src={logo} alt="" className="logo" />
+          </Link>
           <div className="name-title">Laxsik Ecolodge</div>
         </div>
         <div className="bd"></div>

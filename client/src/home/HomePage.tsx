@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import galery_1 from "../assets/images/galery/galery_1.png";
 import logo from "../assets/images/logo.png";
 import Banner from "../components/Banner";
@@ -9,7 +10,11 @@ import RoomInfoSlide from "../components/RoomInfoSlice";
 import ServiceSection from "../components/ServiceSection";
 
 
+
 export default function HomePage() {
+  useEffect(()=>{
+    document.title = 'Laxsik Ecolodge'
+  },[])
   return (
     <div>
       <Banner banner={galery_1}></Banner>
