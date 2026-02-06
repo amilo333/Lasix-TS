@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./home/HomePage.tsx";
 import DinningPage from "./dining/DinningPage.tsx";
 import SpaMassage from "./spa/SpaMassage.tsx";
+import RoomPage from "./rooms/RoomPage.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -17,6 +18,7 @@ createRoot(document.getElementById("root")!).render(
           <Route index element={<HomePage />} />
           <Route path="dinning" element={<DinningPage />} />
           <Route path="spa&massage" element={<SpaMassage />} />
+          <Route path="room" element={<RoomPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

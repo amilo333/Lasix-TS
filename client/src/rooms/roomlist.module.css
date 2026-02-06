@@ -1,0 +1,27 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin: 120px 1rem 6rem 1rem ;
+    
+}
+
+.box{
+ width: 70%;
+}
+
+.text{
+ width: 70%;
+}
+
+.title{
+ text-align: left;
+ font-size: 32px;
+}
+
+.desc{
+    padding: 2rem 2rem 2rem 0;
+    text-align: left;
+    font-size: 18px;
+}

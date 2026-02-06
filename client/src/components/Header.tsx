@@ -23,7 +23,7 @@ export default function Header() {
     <div>
       <div className="header-row">
         <div className="header-left">
-          <Link to='/'>
+          <Link to="/">
             <img src={logo} alt="" className="logo" />
           </Link>
           <div className="name-title">Laxsik Ecolodge</div>
@@ -36,7 +36,12 @@ export default function Header() {
               OVERVIEW <img src={down} alt="" />
             </li>
             <li>
-              ROOMS <img src={down} alt="" />
+              <Link
+                to={"room"}
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                ROOMS <img src={down} alt="" />
+              </Link>
             </li>
             <li>
               <Link

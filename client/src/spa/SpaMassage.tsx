@@ -6,6 +6,9 @@ import Footer from "../components/Footer";
 import logo_1 from "../assets/images/logo/logo_1.png";
 import { useEffect } from "react";
 
+
+import RoomList from "../rooms/RoomList";
+
 export default function SpaMassage() {
   useEffect(() => {
     document.title = "Spa & Massage";
