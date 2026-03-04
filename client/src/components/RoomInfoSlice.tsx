@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import {  Pagination } from "swiper/modules";
 import room1 from "../assets/images/rooms/room.png";
 import room2 from "../assets/images/rooms/room_img.png";
-import styles from "./RoomInfoSlide.module.css";
+import styles from "./roomInfoSlide.module.css";
 
 const rooms = [
   {
