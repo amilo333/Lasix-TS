@@ -1,6 +1,14 @@
 
 import styles from './ServiceItem.module.css'
-export default function ServiceItem({ item }) {
+
+type ServiceItemprops = {
+  item: {
+    image: string;
+    title: string;
+    desc: string;
+  };
+};
+export default function ServiceItem({ item }: ServiceItemprops) {
   return (
     <div className={styles["box"]}>
       <img src={item.image} alt="image" />

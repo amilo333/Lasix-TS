@@ -1,4 +1,4 @@
-import React from "react";
+
 import { facilities } from "../data/Room/FacilityData";
 import styles from "./facility.module.css";
 

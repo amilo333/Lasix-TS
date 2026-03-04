@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./content.css";
 import screen from "../assets/images/bg-screen.jpg";
 

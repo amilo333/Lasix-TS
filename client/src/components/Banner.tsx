@@ -1,8 +1,10 @@
 
 import "./banner.css";
+type BannerProps = {
+  banner: string;
+};
 
-
-export default function Banner({banner}) {
+export default function Banner({banner}: BannerProps) {
   return (
     <div>
       <div className="container">
