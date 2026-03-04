@@ -1,7 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import {  Pagination } from "swiper/modules";
-import 'swiper/css';
-
 import room1 from "../assets/images/rooms/room.png";
 import room2 from "../assets/images/rooms/room_img.png";
 import styles from "./RoomInfoSlide.module.css";

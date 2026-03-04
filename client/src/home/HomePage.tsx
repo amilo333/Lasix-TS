@@ -6,7 +6,7 @@ import Content from "../components/Content";
 import ExploreSapa from "../components/ExploreSapa";
 import Footer from "../components/Footer";
 import PostSapa from "../components/PostSapa";
-import RoomInfoSlide from "../components/RoomInfoSlice";
+import RoomInfoSlide from  "../components/RoomInfoSlice"
 import ServiceSection from "../components/ServiceSection";
 
 
