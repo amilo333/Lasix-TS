@@ -1,12 +1,14 @@
 import styles from "./InfoRoom.module.css";
 import type { Room } from "../data/Room/RoomInfo";
 import arrow from "../assets/images/icon/ic_arrow.png";
+import { Link } from "react-router-dom";
 interface InfoRoomProps {
   room: Room;
 }
 
 export default function InfoRoom({ room }: InfoRoomProps) {
-  const { img, title, desc, price, infos } = room;
+  const { id, img, title, desc, price, infos } = room;
+
   return (
     <div className={styles["container"]}>
       <img src={img} alt="" className={styles["imgRoom"]} />
@@ -28,7 +30,9 @@ export default function InfoRoom({ room }: InfoRoomProps) {
             <p className={styles.price}>$ {price}.00</p>
           </div>
 
-          <button className={styles.btn}>BOOK NOW</button>
+          <Link to={`/room/${id}`} className={styles.btn}>
+            BOOK NOW
+          </Link>
         </div>
       </div>
     </div>

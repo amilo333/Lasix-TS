@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  height: 700px;
+  min-height: 700px;
   display: flex;
   padding-top: 4rem;
 }
@@ -52,4 +52,20 @@
 /* nếu không muốn kẻ dưới item cuối */
 .item:last-child {
   border-bottom: none;
+}
+
+@media screen and (max-width: 391px) {
+  .container {
+    flex-direction: column;
+  }
+  .policy {
+    width: 100%;
+  }
+  .box{
+    width: 100%;
+    padding: 2rem;
+  }
+  .secret{
+    gap: 1rem;
+  }
 }

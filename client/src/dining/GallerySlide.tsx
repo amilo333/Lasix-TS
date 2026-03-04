@@ -32,18 +32,20 @@ export default function GallerySlide() {
         <Swiper
           spaceBetween={50}
           slidesPerView={3}
+          centeredSlides={true}
+          initialSlide={1}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
           breakpoints={{
-          0: {
-            slidesPerView: 1, // mobile
-            centeredSlides: false,
-          },
-          1024: {
-            slidesPerView: 3, // desktop
-            centeredSlides: true,
-          },
-        }}
+            0: {
+              slidesPerView: 3, // mobile
+              centeredSlides: false,
+            },
+            1024: {
+              slidesPerView: 3, // desktop
+              centeredSlides: true,
+            },
+          }}
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>

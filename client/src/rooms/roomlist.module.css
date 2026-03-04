@@ -25,3 +25,12 @@
     text-align: left;
     font-size: 18px;
 }
+
+@media screen and (max-width: 391px) {
+  .text{
+    display: none;
+  }
+  .box{
+    width: 100%;
+  }
+}

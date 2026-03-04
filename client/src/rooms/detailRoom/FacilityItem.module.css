@@ -1,0 +1,44 @@
+.box {
+  width: 40%;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.image {
+  filter: invert(1);
+}
+
+.title {
+  font-size: 18px;
+  font-family: "Montserrat";
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+}
+
+.desc {
+  font-size: 17px;
+  font-family: "Montserrat";
+  color: rgb(75, 75, 75);
+}
+
+@media screen and (max-width: 391px) {
+  .box {
+    width: 100%;
+    padding: 1rem 0;
+  }
+  .title {
+    font-size: 17px;
+  }
+  .desc {
+    font-size: 14px;
+  }
+}

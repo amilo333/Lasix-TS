@@ -139,6 +139,7 @@
   width: 90%;
   color: #fff;
   height: 46px;
+  border: none !important;
 }
 
 @media (max-width: 391px) {

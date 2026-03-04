@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+  margin-bottom: 3rem;
+}
+.box-service {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 80px;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact {
+  width: 90%;
+  background-color: #0d4949;
+  height: 120px;
+}
+
+@media screen and (max-width: 391px) {
+  .container {
+    width: 100%;
+    gap: 20px;
+  }
+  .box-service {
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: nowrap;
+    padding-left: 2rem;
+  }
+  .contact {
+    width: 100%;
+    background-color: #0d4949;
+    height: 244px;
+  }
+}
