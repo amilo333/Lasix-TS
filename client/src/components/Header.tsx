@@ -1,12 +1,44 @@
 import logo from "../assets/images/logo/logo_2.png";
 import down from "../assets/images/chevron_down.png";
-import flag from "../assets/images/flag_eng.png";
+import flagEN from "../assets/images/flag_eng.png";
+import flagVI from "../assets/images/flag_vi.png";
 import calendar from "../assets/images/icon/ic_calendar.png";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import ic_minus from "../assets/images/icon/ic_minus.png";
+import ic_plus from "../assets/images/icon/ic_plus.png";
 import "./header.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
+type Language = {
+  code: string;
+  label: string;
+  flag: string;
+};
 export default function Header() {
+  const [checkIn, setCheckIn] = useState<Date | null>(null);
+  const [checkOut, setCheckOut] = useState<Date | null>(null);
+  const [guestOpen, setGuestOpen] = useState(false);
+
+  const [guests, setGuests] = useState({
+    adults: 2,
+    children: 0,
+    rooms: 1,
+  });
+
+  const increase = (type: "rooms" | "adults" | "children") => {
+    setGuests((prev) => ({
+      ...prev,
+      [type]: prev[type] + 1,
+    }));
+  };
+
+  const decrease = (type: "rooms" | "adults" | "children") => {
+    setGuests((prev) => ({
+      ...prev,
+      [type]: prev[type] > 0 ? prev[type] - 1 : 0,
+    }));
+  };
   const [show, setShow] = useState(false);
   const showBooking = () => {
     setShow((prev) => !prev);
@@ -17,6 +49,19 @@ export default function Header() {
   };
   const closeBooking = () => {
     setOpen(false);
+  };
+
+  const [langOpen, setLangOpen] = useState<boolean>(false);
+
+  const [language, setLanguage] = useState<Language>({
+    code: "ENG",
+    label: "English",
+    flag: flagEN,
+  });
+
+  const changeLanguage = (lang: Language) => {
+    setLanguage(lang);
+    setLangOpen(false);
   };
 
   return (
@@ -70,9 +115,32 @@ export default function Header() {
           </ul>
         </div>
         <div className="header-right">
-          <div className="language">
-            <img src={flag} alt="" />
-            ENG <img src={down} alt="" />
+          <div className="language" onClick={() => setLangOpen(!langOpen)}>
+            <img src={language.flag} alt="" className="flagVI" />
+            {language.code} <img src={down} alt="" />
+            {langOpen && (
+              <div className="lang-dropdown">
+                <div
+                  className="lang-item"
+                  onClick={() =>
+                    changeLanguage({ code: "ENG", label: "ENG", flag: flagEN })
+                  }
+                >
+                  <img src={flagEN} alt="" />
+                  ENG
+                </div>
+
+                <div
+                  className="lang-item"
+                  onClick={() =>
+                    changeLanguage({ code: "VIE", label: "VIE", flag: flagVI })
+                  }
+                >
+                  <img src={flagVI} alt="" className="flagVI" />
+                  VIE
+                </div>
+              </div>
+            )}
           </div>
           <button className="menu-icon" onClick={showBooking}>
             ☰
@@ -92,23 +160,116 @@ export default function Header() {
       </div>
 
       <div className={open ? "booking-bar show" : "booking-bar"}>
+        <img src={down} alt="" className="down-btn" />
         <button onClick={closeBooking} className="btn-hide">
           HIDE
         </button>
         <div className="booking-form">
           <div className="field">
             <label>Checkin Date</label>
-            <input type="text" />
+            <DatePicker
+              selected={checkIn}
+              onChange={(date: Date | null) => setCheckIn(date)}
+              placeholderText="Select date"
+              dateFormat="dd/MM/yyyy"
+            />
           </div>
 
           <div className="field">
             <label>Check-out Date</label>
-            <input type="text" placeholder="Select date" />
+            <DatePicker
+              selected={checkOut}
+              onChange={(date: Date | null) => setCheckOut(date)}
+              placeholderText="Select date"
+              dateFormat="dd/MM/yyyy"
+              minDate={checkIn || undefined}
+            />
           </div>
 
-          <div className="field">
+          <div className="field guest-field">
             <label>Guest</label>
-            <input type="text" placeholder="" />
+
+            <div
+              className="guest-input"
+              onClick={() => setGuestOpen(!guestOpen)}
+            >
+              {guests.adults} Adults - {guests.children} Children -{" "}
+              {guests.rooms} Rooms
+            </div>
+
+            {guestOpen && (
+              <div className="guest-dropdown">
+                <div className="guest-row">
+                  <span>Rooms</span>
+                  <div className="counter">
+                    <button
+                      className="counter-btn"
+                      onClick={() => decrease("rooms")}
+                    >
+                      <img src={ic_minus} alt="" />
+                    </button>
+
+                    <span>{guests.rooms}</span>
+
+                    <button
+                      className="counter-btn"
+                      onClick={() => increase("rooms")}
+                    >
+                      <img src={ic_plus} alt="" />
+                    </button>
+                  </div>
+                </div>
+
+                <div className="guest-row">
+                  <span>Adults</span>
+                  <div className="counter">
+                    <button
+                      className="counter-btn"
+                      onClick={() => decrease("adults")}
+                    >
+                      <img src={ic_minus} alt="" />
+                    </button>
+
+                    <span>{guests.adults}</span>
+
+                    <button
+                      className="counter-btn"
+                      onClick={() => increase("adults")}
+                    >
+                      <img src={ic_plus} alt="" />
+                    </button>
+                  </div>
+                </div>
+
+                <div className="guest-row">
+                  <span>Children</span>
+                  <div className="counter">
+                    <button
+                      className="counter-btn"
+                      onClick={() => decrease("children")}
+                    >
+                      <img src={ic_minus} alt="" />
+                    </button>
+
+                    <span>{guests.children}</span>
+
+                    <button
+                      className="counter-btn"
+                      onClick={() => increase("children")}
+                    >
+                      <img src={ic_plus} alt="" />
+                    </button>
+                  </div>
+                </div>
+
+                <button
+                  className="guest-done"
+                  onClick={() => setGuestOpen(false)}
+                >
+                  Done
+                </button>
+              </div>
+            )}
           </div>
 
           <div className="field field--promo">

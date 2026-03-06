@@ -23,6 +23,11 @@
   width: 120px;
   object-fit: contain;
 }
+.nav-list li a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
 
 .bd {
   /* bd */
@@ -187,8 +192,9 @@
   top: 0px;
   right: 130px;
   cursor: pointer;
-  background: inherit;
+
   backdrop-filter: inherit;
+  background: #0000001a;
 }
 
 .menu-icon {
@@ -201,6 +207,123 @@
 
 .sub-header {
   display: none;
+}
+
+.down-btn {
+  position: absolute;
+  right: 170px;
+  top: -6px;
+  transform: rotate(180deg);
+}
+
+.language {
+  position: relative;
+  cursor: pointer;
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background: white;
+  color: black;
+  width: 120px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 0.5rem;
+}
+
+.lang-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  gap: 6px;
+}
+
+.lang-item:hover {
+  background: #f2f2f2;
+}
+
+.flagVI {
+  width: 24px;
+  height: 16px;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container input {
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  font-family: "Montserrat";
+}
+
+.guest-field {
+  position: relative;
+}
+
+.guest-input {
+  border: 1px solid #ccc;
+  padding: 8px;
+  cursor: pointer;
+  background: white;
+  width: 302.33px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.guest-dropdown {
+  position: absolute;
+  top: 72px;
+  left: 0;
+  background: white;
+  border: 1px solid #ddd;
+  width: 100%;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.guest-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.counter-btn {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #ddd;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.counter-btn img {
+  width: 14px;
+}
+
+.guest-done {
+  background: #0d4f45;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  float: right;
+  cursor: pointer;
+  width: 100px;
+  height: 38px;
+  font-weight: 700;
+  font-family: "Montserrat";
 }
 
 @media screen and (max-width: 391px) {
