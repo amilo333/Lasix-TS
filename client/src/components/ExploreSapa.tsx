@@ -48,9 +48,9 @@ export default function ExploreSapa() {
       <div className={styles.wrapper}>
         {explore1.map((explore, index) => (
           <div className={styles.box} key={index}>
-            <img src={explore.image} alt="" />
+            <img src={explore.image} alt="" loading="lazy"/>
             <div className={styles.content}>
-              <img className={styles.icon} src={explore.icon} alt="" />
+              <img className={styles.icon} src={explore.icon} alt="" loading="lazy"/>
               <div className={styles.title}>{explore.title}</div>
               <div className={styles.desc}>{explore.desc}</div>
               <button className={styles.btn}>
@@ -61,9 +61,9 @@ export default function ExploreSapa() {
         ))}
         {explore2.map((explore, index) => (
           <div className={styles.box} key={index}>
-            <img src={explore.image} alt="" />
+            <img src={explore.image} alt="" loading="lazy"/>
             <div className={styles.content}>
-              <img className={styles.icon} src={explore.icon} alt="" />
+              <img className={styles.icon} src={explore.icon} alt="" loading="lazy"/>
               <div className={styles.title}>{explore.title}</div>
               <div className={styles.desc}>{explore.desc}</div>
               <button className={styles.btn}>
@@ -74,9 +74,9 @@ export default function ExploreSapa() {
         ))}
         {explore3.map((explore, index) => (
           <div className={styles.box} key={index}>
-            <img src={explore.image} alt="" />
+            <img src={explore.image} alt="" loading="lazy"/>
             <div className={styles.content}>
-              <img className={styles.icon} src={explore.icon} alt="" />
+              <img className={styles.icon} src={explore.icon} alt="" loading="lazy"/>
               <div className={styles.title}>{explore.title}</div>
               <div className={styles.desc}>{explore.desc}</div>
               <button className={styles.btn}>
@@ -87,9 +87,9 @@ export default function ExploreSapa() {
         ))}
         {explore4.map((explore, index) => (
           <div className={styles.box} key={index}>
-            <img src={explore.image} alt="" />
+            <img src={explore.image} alt="" loading="lazy"/>
             <div className={styles.content}>
-              <img className={styles.icon} src={explore.icon} alt="" />
+              <img className={styles.icon} src={explore.icon} alt="" loading="lazy"/>
               <div className={styles.title}>{explore.title}</div>
               <div className={styles.desc}>{explore.desc}</div>
               <button className={styles.btn}>

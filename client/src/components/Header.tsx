@@ -209,7 +209,7 @@ export default function Header() {
                       <img src={ic_minus} alt="" />
                     </button>
 
-                    <span>{guests.rooms}</span>
+                    <div className="counter-number">{guests.rooms}</div>
 
                     <button
                       className="counter-btn"
@@ -230,7 +230,7 @@ export default function Header() {
                       <img src={ic_minus} alt="" />
                     </button>
 
-                    <span>{guests.adults}</span>
+                    <div className="counter-number">{guests.adults}</div>
 
                     <button
                       className="counter-btn"
@@ -251,7 +251,7 @@ export default function Header() {
                       <img src={ic_minus} alt="" />
                     </button>
 
-                    <span>{guests.children}</span>
+                    <div className="counter-number">{guests.children}</div>
 
                     <button
                       className="counter-btn"

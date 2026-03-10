@@ -1,13 +1,13 @@
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import galery_1 from "../assets/images/galery/galery_1.png";
 import logo from "../assets/images/logo.png";
 import Banner from "../components/Banner";
 import Content from "../components/Content";
-import ExploreSapa from "../components/ExploreSapa";
-import Footer from "../components/Footer";
-import PostSapa from "../components/PostSapa";
-import RoomInfoSlide from  "../components/RoomInfoSlice"
-import ServiceSection from "../components/ServiceSection";
+const RoomInfoSlide = lazy(() => import("../components/RoomInfoSlice"));
+const ServiceSection = lazy(() => import("../components/ServiceSection"));
+const ExploreSapa = lazy(() => import("../components/ExploreSapa"));
+const PostSapa = lazy(() => import("../components/PostSapa"));
+const Footer = lazy(() => import("../components/Footer"));
 
 
 
@@ -19,11 +19,13 @@ export default function HomePage() {
     <div>
       <Banner banner={galery_1}></Banner>
       <Content></Content>
-      <RoomInfoSlide></RoomInfoSlide>
-      <ServiceSection></ServiceSection>
-      <ExploreSapa></ExploreSapa>
-      <PostSapa></PostSapa>
-      <Footer logo={logo}></Footer>
+      <Suspense fallback={<div>Loading...</div>}>
+        <RoomInfoSlide />
+        <ServiceSection />
+        <ExploreSapa />
+        <PostSapa />
+        <Footer logo={logo} />
+      </Suspense>
     </div>
   );
 }

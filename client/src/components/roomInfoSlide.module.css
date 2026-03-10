@@ -9,6 +9,7 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 1rem;
+  
 }
 
 .slide-container img {
@@ -17,6 +18,9 @@
   aspect-ratio: 23/17;
   object-fit: cover;
 }
+:global(.swiper-slide-active) .slide-container img {
+  height: 360px;
+} 
 
 .slide-title {
   text-align: center;
@@ -42,19 +46,17 @@
   display: block;
 } */
 
-.swiper-slide {
-  width: 480px;
-  height: 656px;
+.room-info-slide-container :global(.swiper-slide) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transform: scale(0.9) translateY(0);
+  transform: scale(0.85) translateY(0);
   transition: transform 0.45s ease;
   z-index: 1;
 }
 
-.swiper-slide-active {
-  transform: scale(1) translateY(-80px);
+.room-info-slide-container :global(.swiper-slide-active) {
+  transform: scaleX(1.15) scaleY(1) translateY(-80px);
   z-index: 10;
 }
 

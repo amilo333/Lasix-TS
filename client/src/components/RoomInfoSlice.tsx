@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import {  Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import room1 from "../assets/images/rooms/room.png";
 import room2 from "../assets/images/rooms/room_img.png";
 import styles from "./roomInfoSlide.module.css";
@@ -68,11 +68,10 @@ export default function RoomInfoSlide() {
           <SwiperSlide key={index}>
             {({ isActive }) => (
               <div className={styles["slide-container"]}>
-                <img src={item.image} alt="image" />
-
+                <img src={item.image} alt="image" loading="lazy" />
+                <div className={styles["slide-title"]}>{item.title}</div>
                 {isActive && (
                   <>
-                    <div className={styles["slide-title"]}>{item.title}</div>
                     <div className={styles["slide-desc"]}>{item.desc}</div>
                     <button className={styles["btn-ex"]}>EXPLORE</button>
                   </>

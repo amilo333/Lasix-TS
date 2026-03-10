@@ -53,7 +53,7 @@ export default function PostSapa() {
         <div className={styles.list}>
           {posts.map((post, index) => (
             <div className={styles.box} key={index}>
-              <img src={post.image} alt="" />
+              <img src={post.image} alt="" loading="lazy"/>
               <div className={styles.name}>{post.name}</div>
             </div>
           ))}

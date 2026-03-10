@@ -298,6 +298,10 @@
   gap: 12px;
 }
 
+.counter-number{
+  width: 10px;
+}
+
 .counter-btn {
   width: 36px;
   height: 36px;

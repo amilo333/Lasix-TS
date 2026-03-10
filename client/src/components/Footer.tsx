@@ -12,8 +12,8 @@ export default function Footer({ logo }: FooterProps) {
   return (
     <div>
       <div className={styles.container}>
-        <img src={logo} alt="" className={styles.logo} />
-        <img src={logo_1} alt="" className={styles.logo_1} />
+        <img src={logo} alt="" className={styles.logo} loading="lazy" />
+        <img src={logo_1} alt="" className={styles.logo_1} loading="lazy"/>
         <p>Lao Chai, Sa Pa, Lao Cai, Vietnam</p>
         <div className={styles.info}>
           <div className={styles.hotline}>Hotline: (+84) 214 3892 999</div>
@@ -22,10 +22,10 @@ export default function Footer({ logo }: FooterProps) {
           </div>
         </div>
         <div className={styles.network}>
-          <img src={ic_twitter} alt="" />
-          <img src={ic_linkedin} alt="" />
-          <img src={ic_facebook} alt="" />
-          <img src={ic_instagram} alt="" />
+          <img src={ic_twitter} alt="" loading="lazy"/>
+          <img src={ic_linkedin} alt="" loading="lazy"/>
+          <img src={ic_facebook} alt="" loading="lazy"/>
+          <img src={ic_instagram} alt="" loading="lazy"/>
         </div>
         <div className={styles.list}>
           <div className={styles.item}>Join Our Teams</div>

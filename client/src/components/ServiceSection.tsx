@@ -24,7 +24,7 @@ export default function ServiceSection() {
           {services.map((service, index) => (
             <div className={styles.box} key={index}>
               <div className={styles.imgService}>
-                <img src={service.image} alt={service.title} />
+                <img src={service.image} alt={service.title} loading="lazy"/>
               </div>
 
               <div className={styles.content}>
